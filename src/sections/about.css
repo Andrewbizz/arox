@@ -278,18 +278,6 @@
     margin-bottom: 40px;
   }
 
-  .yoga-main-image {
-    width: 90%;
-    /* Make image responsive */
-    max-width: 400px;
-    /* Keep max width */
-    height: 500px;
-    /* Maintain aspect ratio */
-    -ms-flex-order: 1;
-    background-color: red;
-    margin: auto;
-    order: 0;
-  }
 
   .templates-button,
   .framer-button {
@@ -332,5 +320,19 @@
 
   .feature-item p {
     font-size: 14px;
+  }
+
+
+  .yoga-main-image {
+    width: 300px !important;
+    /* Make image responsive */
+    max-width: 400px;
+    /* Keep max width */
+    height: 400px;
+    /* Maintain aspect ratio */
+    -ms-flex-order: 1;
+    background-color: red;
+    margin: auto;
+    order: 0;
   }
 }
