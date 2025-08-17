@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50)
-    }
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <style jsx>{`
+      <style>{`
         .navbar {
           position: fixed;
           top: 0;
@@ -27,7 +27,9 @@ export default function Navbar() {
           padding: 16px 32px;
           transition: all 0.3s ease;
           backdrop-filter: ${isScrolled ? "blur(10px)" : "none"};
-          background: ${isScrolled ? "rgba(255, 255, 255, 0.43)" : "transparent"}; 
+          background: ${
+            isScrolled ? "rgba(255, 255, 255, 0.43)" : "transparent"
+          }; 
         }
 
         .nav-container {
@@ -133,7 +135,6 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="nav-container">
           <a href="/" className="logo">
-          
             Elites
           </a>
 
@@ -160,11 +161,11 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <div className="nav-actions"> 
+          <div className="nav-actions">
             <button className="primary-button">Book Now</button>
           </div>
         </div>
       </nav>
     </>
-  )
+  );
 }
