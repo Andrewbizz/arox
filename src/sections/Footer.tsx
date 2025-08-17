@@ -118,7 +118,7 @@ export default function Footer() {
         <p className="copyright">© 2025 Elites All rights reserved.</p>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .footer-container {
           // background: linear-gradient(135deg, #fff 0%, #fff 50%,  (--secondary-color) 100%);
           border-radius: 24px;
