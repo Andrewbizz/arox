@@ -6,15 +6,15 @@ export default function Footer() {
       {/* Call to Action Section */}
       <div className="cta-section">
         <h2 className="cta-title">
-          Ready to Take Control
+          Ready to Transform
           <br />
-          of Your Health?
+          Your Look?
         </h2>
         <p className="cta-description">
-          Get expert care for weight loss, sexual health, wellness, and more —
-          all
+          Get expert care for hair, nails, facials, and more — all tailored to
+          your unique style.
           <br />
-          from the comfort of home, no insurance needed.
+          Step into luxury and leave with confidence, no stress attached.
         </p>
         <div className="cta-buttons">
           <button className="btn-primary">Start Now</button>
@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="footer-content">
         {/* <div className="footer-left">
           <div className="logo">
-            <span className="logo-text">Elites</span>
+            <span className="logo-text">AROX</span>
           </div>
           <div className="newsletter">
             <p className="newsletter-text">Sign up to receive health tips.</p>
@@ -115,7 +115,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p className="copyright">© 2025 Elites All rights reserved.</p>
+        <p className="copyright">© 2025 AROX All rights reserved.</p>
       </div>
 
       <style>{`
@@ -271,6 +271,7 @@ export default function Footer() {
 
         .footer-links {
           display: flex;
+          justify-content: center;
           gap: 60px;
           flex: 2;
         }

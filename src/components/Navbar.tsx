@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showSideNav, setShowSideNav] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,18 +37,23 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          max-width: 1200px;
+          max-width: 1200px; 
+          position: relative
           margin: 0 auto;
         }
 
         .logo {
           display: flex;
-          align-items: center;
+          align-self: center;
+          align-content: center;
+          justify-content: center;
           gap: 8px;
           font-size: 20px;
+          height: 20px;
           font-weight: 600;
-          color: #000;
+          color: #000; 
           text-decoration: none;
+          padding-top: 30px
         }
 
         .logo-icon {
@@ -117,6 +123,10 @@ export default function Navbar() {
           transform: translateY(-1px);
         }
 
+        .breadcrumb-btn{
+          display: none
+        }
+
         @media (max-width: 768px) {
           .navbar {
             padding: 12px 20px;
@@ -127,7 +137,17 @@ export default function Navbar() {
           }
           
           .nav-actions {
-            gap: 12px;
+            display: none
+          }
+ .breadcrumb-btn{
+          display: block
+        }
+          .sidenav-overlay{
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(3px);
+            z-index: 999999999999999999;
+            position: fixed
           }
         }
       `}</style>
@@ -135,7 +155,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="nav-container">
           <a href="/" className="logo">
-            Elites
+            AROX
           </a>
 
           <ul className="nav-links">
@@ -164,8 +184,86 @@ export default function Navbar() {
           <div className="nav-actions">
             <button className="primary-button">Book Now</button>
           </div>
+          <div className="breadcrumb-menu">
+            <button
+              className="breadcrumb-btn"
+              onClick={() => setShowSideNav(true)}
+              aria-label="Open menu"
+            >
+              <span style={{ fontSize: 22, fontWeight: 700 }}>☰</span>
+            </button>
+          </div>
         </div>
       </nav>
+
+      {showSideNav && (
+        <div className="sidenav-overlay" onClick={() => setShowSideNav(false)}>
+          <aside
+            style={{
+              position: "fixed",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              width: "260px",
+              height: "100%",
+              background: "#fff",
+              boxShadow: "0 0 16px rgba(0,0,0,0.12)",
+              zIndex: 999999999999,
+              padding: "32px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "24px",
+              transition: "transform 0.3s ease",
+            }}
+          >
+            <button
+              style={{
+                alignSelf: "flex-end",
+                background: "none",
+                border: "none",
+                fontSize: 24,
+                color: "grey",
+                cursor: "pointer",
+              }}
+              onClick={() => setShowSideNav(false)}
+              aria-label="Close menu"
+            >
+              ×
+            </button>
+            <a
+              href="#about"
+              className="nav-link"
+              onClick={() => setShowSideNav(false)}
+            >
+              About us
+            </a>
+            <a
+              href="#testimony"
+              className="nav-link"
+              onClick={() => setShowSideNav(false)}
+            >
+              Testimonials
+            </a>
+            <a
+              href="#services"
+              className="nav-link"
+              onClick={() => setShowSideNav(false)}
+            >
+              Services
+            </a>
+            <a
+              href="#contact"
+              className="nav-link"
+              onClick={() => setShowSideNav(false)}
+            >
+              Contact us
+            </a>
+            <button className="primary-button" style={{ marginTop: "auto" }}>
+              Book Now
+            </button>
+          </aside>
+        </div>
+      )}
     </>
   );
 }
