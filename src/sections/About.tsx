@@ -70,10 +70,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div
-            style={{ width: 400, height: 600 }}
-            className="yoga-main-image"
-          ></div>
+          <div className="yoga-main-image"></div>
 
           <div className="yoga-features-right">
             <div className="feature-item">

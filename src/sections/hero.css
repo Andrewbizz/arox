@@ -1,5 +1,5 @@
 .hero-section-container {
-   height: 100vh;
+   min-height: 100vh;
    max-height: 1500px;
    display: flex;
    justify-content: center;
@@ -146,10 +146,11 @@
 
 @media screen and (max-width: 1000px) {
    .hero-section-container {
-      height: 100vh;
+      min-height: 100vh;
       max-height: 1300px;
       flex-direction: column;
-      padding: 2rem 1rem;
+      padding: 1rem;
+      padding-top: 5rem;
    }
 
    .hero-main-content {
