@@ -37,23 +37,22 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          max-width: 1200px; 
-          position: relative
+          max-width: 1200px;
           margin: 0 auto;
         }
 
         .logo {
           display: flex;
-          align-self: center;
+          align-items: center;
           align-content: center;
           justify-content: center;
           gap: 8px;
           font-size: 20px;
+          padding-top: 30px;
           height: 20px;
           font-weight: 600;
-          color: #000; 
+          color: #000;
           text-decoration: none;
-          padding-top: 30px
         }
 
         .logo-icon {
@@ -123,7 +122,7 @@ export default function Navbar() {
           transform: translateY(-1px);
         }
 
-        .breadcrumb-btn{
+        .breadcrumb-menu{
           display: none
         }
 
@@ -139,9 +138,9 @@ export default function Navbar() {
           .nav-actions {
             display: none
           }
- .breadcrumb-btn{
-          display: block
-        }
+
+          .breadcrumb-menu{
+          display: flex}
           .sidenav-overlay{
             width: 100%;
             height: 100%;
