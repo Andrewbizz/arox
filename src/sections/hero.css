@@ -147,10 +147,11 @@
 @media screen and (max-width: 1000px) {
    .hero-section-container {
       min-height: 100vh;
-      max-height: 1300px;
+      max-height: 1500px;
       flex-direction: column;
       padding: 1rem;
       padding-top: 5rem;
+      padding-bottom: 5rem;
    }
 
    .hero-main-content {

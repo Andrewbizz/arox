@@ -1,29 +1,31 @@
-
 @font-face {
   font-family: 'CustomFont';
   src: url('../src/assets/fonts/Satoshi-Variable.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-:root { 
-  font-weight: 400; 
-  color-scheme: light dark; 
+
+:root {
+  font-weight: 400;
+  color-scheme: light dark;
   background-color: #fff;
-  color: #333333;  
+  color: #333333;
   font-size: 'CustomFont', sans-serif !important;
   --primary-color: #1b1308;
   --secondary-color: bisque;
 }
-  
- 
+
+
 body {
   font-family: 'CustomFont', sans-serif;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 /* Services.css or globals.css */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -35,39 +37,39 @@ body {
 }
 
 
-.primary-button{
-             background-color: var(--primary-color);
-             border: none;
-             border-radius: 1rem;
-             padding: 1rem 2rem;
-             display: flex;
-             height: 40px;
-             align-items: center;
-             font-family: 'CustomFont';
-             gap: 4px;
+.primary-button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  font-family: 'CustomFont';
+  gap: 4px;
 }
 
 
-.secondary-button{
-             background-color: rgba(255, 255, 255, 0);
-             border: none;
-             border-radius: 1rem;
-             padding: 1rem 2rem;
-             color: var(--primary-color);
-             display: flex;
-             align-items: center;
-               font-weight: 1000;
-             height: 40px;
-             font-family: 'CustomFont';
-             gap: 4px;
+.secondary-button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-weight: 1000;
+  height: 40px;
+  font-family: 'CustomFont';
+  gap: 4px;
 }
 
 
 @media screen and (max-width: 1000px) {
-  
-   .primary-button { 
-      justify-content: center;
-      /* padding: 1rem;  */
-      font-size: 0.8rem;
-   }
+
+  .primary-button {
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.65rem;
+  }
 }
