@@ -119,8 +119,8 @@
 }
 
 
-.service-card::after {
-  /* content: '';
+/* .service-card::after { */
+/* content: '';
                     position: absolute;
                     top: 0;
                     left: -10px;
@@ -129,7 +129,7 @@
                     background: var(--primary-color);
                     border-radius: 1rem;
                     z-index: 1; /* Behind the content */
-}
+/* } */
 
 
 

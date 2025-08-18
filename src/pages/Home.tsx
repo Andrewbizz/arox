@@ -6,6 +6,7 @@ import Footer from "../sections/Footer";
 import HeroSection from "../sections/Hero";
 import Services from "../sections/Services";
 import TestimonialSection from "../sections/Testimonials";
+import "../App.css";
 
 const Home = () => {
   return (

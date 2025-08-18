@@ -7,9 +7,27 @@ export default function Navbar() {
   const [showSideNav, setShowSideNav] = useState(false);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (scrollTop > lastScrollY && scrollTop < 150) {
+            // Scrolling down
+            document.body.classList.add("navbar-hidden");
+          } else {
+            // Scrolling up
+            document.body.classList.remove("navbar-hidden");
+          }
+          lastScrollY = scrollTop;
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,6 +49,11 @@ export default function Navbar() {
           background: ${
             isScrolled ? "rgba(255, 255, 255, 0.43)" : "transparent"
           }; 
+        }
+
+        .navbar-hidden{
+          transform: translateY(100px);
+          transition: .3s
         }
 
         .nav-container {
