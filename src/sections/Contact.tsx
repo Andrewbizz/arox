@@ -2,7 +2,7 @@ import "./Contact.css";
 
 export default function ContactPage() {
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <div className="contact-content">
         <div className="contact-left">
           <h1 className="main-heading">

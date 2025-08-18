@@ -13,7 +13,7 @@ import "./about.css";
 export default function AboutSection() {
   return (
     <>
-      <section className="about-section">
+      <section id="about" className="about-section">
         <div className="container">
           <h2>Luxury hair treatments for a radiant glow</h2>
 

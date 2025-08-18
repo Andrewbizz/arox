@@ -83,7 +83,7 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="testimonial-section">
+    <section className="testimonial-section" id="testimony">
       <div className="container">
         <div className="header-content">
           <div className="header-label">

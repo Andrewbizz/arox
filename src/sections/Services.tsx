@@ -302,7 +302,7 @@ const Services = () => {
   }, [activeTabId, servicesData]); // Re-run effect if activeTabId or servicesData changes
 
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <div className="container">
         <nav
           className="tabs-nav"

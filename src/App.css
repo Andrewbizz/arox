@@ -13,12 +13,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'CustomFont', sans-serif;
+  scroll-behavior: smooth;
 
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
   padding: 0;
+  transition: 0.3s;
 }
 
 html,
