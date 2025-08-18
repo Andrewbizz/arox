@@ -145,6 +145,7 @@
 .service-items {
   background-color: rgba(0, 0, 0, 0.479);
   padding: 1rem;
+  padding-top: 2.1rem;
   position: absolute;
   backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -167,7 +168,7 @@
 
 .activeItem {
   background-color: rgba(0, 0, 0, 0.548);
-  transform: translateY(-4%);
+  transform: translateY(1%);
   height: 85%;
   transition: transform 0.3s ease-in-out;
 }
