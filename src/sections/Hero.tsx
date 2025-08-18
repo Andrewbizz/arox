@@ -14,11 +14,11 @@ export default function HeroSection() {
             <h1 className="hero-heading">
               Pamper your hair with a soothing salon experience
             </h1>
-            <p className="hero-description">
+            <p className="hero-description" style={{ marginTop: "20px" }}>
               Experience luxury hair care in the heart of London, Ontario.
               Professional styling, coloring, and treatments that transform.
             </p>
-            <button className="primary-button">
+            <button className="primary-button" style={{ marginTop: "20px" }}>
               Book Appointment <Lucide.ArrowRight />{" "}
             </button>
           </div>
