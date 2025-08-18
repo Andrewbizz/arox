@@ -41,6 +41,7 @@ body {
   background-color: var(--primary-color);
   border: none;
   border-radius: 1rem;
+  color: #fff !important;
   padding: 1rem 2rem;
   display: flex;
   height: 40px;
@@ -64,6 +65,10 @@ body {
   gap: 4px;
 }
 
+
+button {
+  color: #fff
+}
 
 @media screen and (max-width: 1000px) {
 

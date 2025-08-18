@@ -22,6 +22,8 @@
 @media (max-width: 480px) {
   .tab-button-content {
     padding-top: 1rem !important;
+    font-size: 13px;
+
   }
 }
 
