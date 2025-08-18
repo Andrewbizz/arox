@@ -7,18 +7,20 @@
   font-weight: normal;
   font-style: normal;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   font-family: 'CustomFont', sans-serif ;
+  font-family: 'CustomFont', sans-serif;
 
 }
 
-html{
+html {
   scroll-behavior: smooth;
   padding: 0;
 }
+
 html,
 body,
 div,
@@ -41,21 +43,21 @@ fieldset,
 blockquote,
 button,
 .link {
-     font-family: 'CustomFont', sans-serif !important ;
-     padding: 0;
+  font-family: 'CustomFont', sans-serif !important;
+  padding: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 
 
 /* Body */
-body { 
-  background-color: #fff; 
+body {
+  background-color: #fff;
 }
- 
+
 
 
 .container {
   max-width: 1200px;
-  margin: auto; 
+  margin: auto;
 }
-
