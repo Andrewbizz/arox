@@ -68,7 +68,7 @@ export default function Navbar() {
   font-size: 20px;
   font-weight: 600;  
   // background-color: red;
-  background-image: url('/src/assets/images/logo.png');
+  background-image: url('./src/assets/images/logo.png');
   background-size: contain;    /* scale image to fit */
   background-repeat: no-repeat;
   background-position: center;
