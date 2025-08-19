@@ -4,30 +4,26 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [showSideNav, setShowSideNav] = useState(false);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
-    let ticking = false;
 
     const handleScroll = () => {
       const scrollTop = window.scrollY;
+
+      // Add blur/background if past 50px
       setIsScrolled(scrollTop > 50);
 
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (scrollTop > lastScrollY && scrollTop < 150) {
-            // Scrolling down
-            document.body.classList.add("navbar-hidden");
-          } else {
-            // Scrolling up
-            document.body.classList.remove("navbar-hidden");
-          }
-          lastScrollY = scrollTop;
-          ticking = false;
-        });
-        ticking = true;
+      // Hide on scroll down, show on scroll up
+      if (scrollTop > lastScrollY) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
       }
+
+      lastScrollY = scrollTop;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,49 +37,45 @@ export default function Navbar() {
           position: fixed;
           top: 0;
           left: 0;
+          padding: 0px 16px;
           right: 0;
-          z-index: 999999000;
-          padding: 16px 32px;
-          transition: all 0.3s ease;
+          z-index: 999999000; 
+          transition: transform 0.3s ease, backdrop-filter 0.3s ease, background 0.3s ease;
           backdrop-filter: ${isScrolled ? "blur(10px)" : "none"};
           background: ${
             isScrolled ? "rgba(255, 255, 255, 0.43)" : "transparent"
-          }; 
-        }
-
-        .navbar-hidden{
-          transform: translateY(100px);
-          transition: .3s
+          };
+          transform: ${isHidden ? "translateY(-100%)" : "translateY(0)"};
         }
 
         .nav-container {
           display: flex;
           align-items: center;
+          align-content: center;
           justify-content: space-between;
+          justify-items: center;
           max-width: 1200px;
           margin: 0 auto;
+          height: 100px;
+          position: relative;
+          // background: blue;
         }
 
-        .logo {
-          display: flex;
-          align-items: center;
-          align-content: center;
-          justify-content: center;
-          gap: 8px;
-          font-size: 20px;
-          padding-top: 30px;
-          height: 20px;
-          font-weight: 600;
-          color: #000;
-          text-decoration: none;
-        }
+        .logo { 
+ position: absolute;
+ top: 20px;  
 
-        .logo-icon {
-          width: 24px;
-          height: 24px;
-          background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-          transform: rotate(45deg);
-          border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;  
+  // background-color: red;
+  background-image: url('/src/assets/images/logo.png');
+  background-size: contain;    /* scale image to fit */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px; 
+  width: 100px;
+  color: #000;
+  text-decoration: none;
         }
 
         .nav-links {
@@ -113,22 +105,7 @@ export default function Navbar() {
           gap: 16px;
         }
 
-        .sign-in-btn {
-          background: none;
-          border: none;
-          color: #374151;
-          font-size: 15px;
-          font-weight: 500;
-          padding: 8px 16px;
-          cursor: pointer;
-          transition: color 0.2s ease;
-        }
-
-        .sign-in-btn:hover {
-          color: #000;
-        }
-
-        .sign-up-btn {
+        .primary-button {
           background: #000;
           color: white;
           border: none;
@@ -140,45 +117,50 @@ export default function Navbar() {
           transition: all 0.2s ease;
         }
 
-        .sign-up-btn:hover {
+        .primary-button:hover {
           background: #374151;
           transform: translateY(-1px);
         }
 
         .breadcrumb-menu{
-          display: none
+          display: none;
         }
 
         @media (max-width: 768px) {
-          .navbar {
-            padding: 12px 20px;
-          }
-          
-          .nav-links {
-            display: none;
-          }
-          
+          .nav-links,
           .nav-actions {
-            display: none
+            display: none;
           }
 
           .breadcrumb-menu{
-          display: flex}
-          .sidenav-overlay{
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(3px);
-            z-index: 999999999999999999;
-            position: fixed
+            display: flex;
           }
         }
       `}</style>
 
       <nav className="navbar">
         <div className="nav-container">
-          <a href="/" className="logo">
-            AROX
-          </a>
+          <div
+            style={{
+              // background: "orange",
+              display: "flex",
+              justifyContent: "bottom",
+              alignItems: "left",
+              alignSelf: "left",
+              width: "100px",
+              height: "100%",
+              alignContent: "center",
+              position: "relative",
+            }}
+          >
+            <a
+              href="/"
+              className="logo"
+              style={{ display: "block", verticalAlign: "middle" }}
+            >
+              {/* <img style={{ width: "80px" }} src="/src/assets/images/logo.png" /> */}
+            </a>
+          </div>
 
           <ul className="nav-links">
             <li>
@@ -206,12 +188,9 @@ export default function Navbar() {
           <div className="nav-actions">
             <button className="primary-button">Book Now</button>
           </div>
+
           <div className="breadcrumb-menu">
-            <button
-              className="breadcrumb-btn"
-              onClick={() => setShowSideNav(true)}
-              aria-label="Open menu"
-            >
+            <button onClick={() => setShowSideNav(true)} aria-label="Open menu">
               <span style={{ fontSize: 22, fontWeight: 700 }}>☰</span>
             </button>
           </div>
@@ -223,7 +202,7 @@ export default function Navbar() {
           <aside
             style={{
               position: "fixed",
-              top: "-10px",
+              top: "0",
               right: 0,
               bottom: 0,
               width: "260px",
