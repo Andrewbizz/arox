@@ -12,7 +12,7 @@ export default function HeroSection() {
         <div className="hero-main-content">
           <div className="hero-text-content">
             <h1 className="hero-heading">
-              Pamper your hair with a soothing salon experience
+              Pamper yourself with a soothing salon experience
             </h1>
             <p className="hero-description" style={{ marginTop: "20px" }}>
               Experience luxury hair care in the heart of London, Ontario.

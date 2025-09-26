@@ -8,6 +8,7 @@ import {
   Square,
 } from "lucide-react";
 import "./about.css";
+
 // import Link from "next/link"
 
 export default function AboutSection() {
