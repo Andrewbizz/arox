@@ -254,7 +254,12 @@
 }
 
 
-
+.service-description {
+  font-size: 12px;
+  margin: auto;
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -271,9 +276,7 @@
   }
 
 
-  .service-description {
-    font-size: 15px;
-  }
+
 
 
 

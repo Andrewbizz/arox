@@ -18,6 +18,7 @@ const servicesData = [
   {
     id: "hair",
     name: "Hair Services",
+    inTitle: "Hair services",
     description:
       "Transform your look with our expert hair styling, coloring, and treatments.",
     subCategories: [
@@ -114,9 +115,11 @@ const servicesData = [
   {
     id: "nails",
     bgImage: heroImg,
-    name: "Nail & Lash  ",
-    description:
-      "Pamper yourself with our luxurious nail care and stunning lash enhancements.",
+    name: "Nail & Pedicure  ",
+    inTitle: `Classic Hardware Pedicure`,
+    description: `Clean. Comfortable. Beautiful.
+The perfect choice for those who value comfort, hygiene, and flawless results. Using a modern machine with built-in vacuum suction, the dry technique allows for a safe and gentle treatment without soaking. Your feet feel smooth and refreshed, while your nails look neat, healthy, and polished for longer.
+`,
     subCategories: [
       {
         id: "manicures",
@@ -194,7 +197,8 @@ const servicesData = [
   {
     id: "facial",
     bgImage: heroImg,
-    name: "Beauty &   Makeup",
+    inTitle: `Makeup `,
+    name: "  Makeup",
     description:
       "Enhance your natural beauty with our brow, lash, and permanent makeup services.",
     subCategories: [
@@ -363,7 +367,7 @@ const Services = () => {
                 aria-labelledby={`tab-${activeService.id}`}
               >
                 <div className="tabHeader">
-                  <h2 className="service-title">{activeService.name}</h2>
+                  <h2 className="service-title">{activeService.inTitle}</h2>
                   <p className="service-description">
                     {activeService.description}
                   </p>
