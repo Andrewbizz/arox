@@ -494,13 +494,11 @@ const Services = () => {
                                   }}
                                 >
                                   <div className="item-name">{item.name}</div>
-                                  {item.price >= 1 ? (
+                                  {Number(item.price) >= 1 ? (
                                     <div className="item-price">
                                       ${item.price}
                                     </div>
-                                  ) : (
-                                    ""
-                                  )}
+                                  ) : null}
                                 </div>
                               );
                             })}
