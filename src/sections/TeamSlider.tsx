@@ -4,6 +4,7 @@ import { Navigation, Pagination, EffectCards } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
 import "./TeamSlider.css";
+import "swiper/css";
 
 interface TeamMember {
   id: number;
