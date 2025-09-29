@@ -1,11 +1,7 @@
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCards } from "swiper/modules";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import type { Swiper as SwiperType } from "swiper";
-
-// Import Swiper styles
-import "swiper/css";
 
 import "./TeamSlider.css";
 
@@ -131,7 +127,7 @@ I aspire to keep learning, mastering new techniques, and creating beauty that yo
 ];
 
 const TeamSlider: React.FC = () => {
-  const swiperRef = useRef<SwiperType>();
+  const swiperRef = useRef<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleTabClick = (index: number) => {
@@ -140,27 +136,16 @@ const TeamSlider: React.FC = () => {
     }
   };
 
-  const SocialIcon = ({ type, url }: { type: string; url: string }) => {
-    const icons = {
-      github: Github,
-      linkedin: Linkedin,
-      twitter: Twitter,
-      email: Mail,
-    };
-
-    const IconComponent = icons[type as keyof typeof icons];
-
-    return (
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="social-icon"
-      >
-        <IconComponent size={20} />
-      </a>
-    );
-  };
+  // const SocialIcon = ({ type, url }: { type: string; url: string }) => {
+  //   return (
+  //     <a
+  //       href={url}
+  //       target="_blank"
+  //       rel="noopener noreferrer"
+  //       className="social-icon"
+  //     ></a>
+  //   );
+  // };
 
   return (
     <div className="team-slider-container">
