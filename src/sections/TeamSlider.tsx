@@ -5,6 +5,12 @@ import type { Swiper as SwiperType } from "swiper";
 
 import "./TeamSlider.css";
 import "swiper/css";
+import img1 from "../assets/images/1.jpg";
+import img2 from "../assets/images/2.png";
+import img3 from "../assets/images/3.jpg";
+import img4 from "../assets/images/4.jpeg";
+import img5 from "../assets/images/5.jpg";
+import img6 from "../assets/images/6.jpg";
 
 interface TeamMember {
   id: number;
@@ -30,7 +36,7 @@ I believe that beauty begins with inner harmony. I find inspiration in sports, t
 
 Today, I’m happy to invite you to my salon — a space where experience and skill come together with warmth, and where every guest feels truly special.
 `,
-    image: "./src/assets/images/1.jpg",
+    image: img1,
     socials: {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
@@ -48,7 +54,7 @@ Throughout the years, I’ve worked with thousands of clients, and my greatest r
 
 Now, I’m proud to welcome you to AROX Beauty — a salon where professionalism, creativity, and care meet warmth and sincerity. Here, every guest is unique, and I’m always happy to create beauty that reflects your individuality.
 `,
-    image: "./src/assets/images/2.png",
+    image: img2,
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -66,7 +72,7 @@ I work with clients of all ages and skin types, carefully selecting the shape an
 
 I approach each client with individual care and find joy in seeing their happiness after the procedure. My mission is to ensure you wake up with flawless makeup and carry confidence every day.
 `,
-    image: "./src/assets/images/3.JPG",
+    image: img3,
     socials: {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
@@ -82,7 +88,7 @@ I love tailoring each set to my client’s style, whether it’s soft and natura
 
 When you come to me, you can expect a cozy, relaxing experience and lashes that make you feel like the best version of yourself. 
 `,
-    image: "./src/assets/images/4.JPEG",
+    image: img4,
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -99,7 +105,7 @@ I work exclusively with high-quality Thya (Spain) products, ensuring every treat
 Currently, I am advancing my skills at the Beauty Icon course with renowned Ukrainian makeup guru Yehor Andriushyn. My mission is to highlight natural beauty and help every woman feel more confident
 
 `,
-    image: "./src/assets/images/5.JPG",
+    image: img5,
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -118,7 +124,7 @@ I’m only at the start of my journey, but I put my heart, care, and responsibil
 I aspire to keep learning, mastering new techniques, and creating beauty that you’ll fall in love with again and again.
  
 `,
-    image: "./src/assets/images/6.jpg",
+    image: img6,
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
