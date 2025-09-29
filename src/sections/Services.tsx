@@ -11,6 +11,7 @@ import chems from "/src/assets/images/services/chems.jpg";
 import manicure from "/src/assets/images/services/manicure.png";
 import peds from "/src/assets/images/services/ped.jpg";
 import lash from "/src/assets/images/services/lash.jpg";
+import bridal from "/src/assets/images/services/bridal.png";
 import brows from "/src/assets/images/services/brows.jpg";
 import perm from "/src/assets/images/services/perm.jpg";
 
@@ -157,6 +158,7 @@ The perfect choice for those who value comfort, hygiene, and flawless results. U
           },
         ],
       },
+
       {
         id: "pedicures",
         bgImage: peds,
@@ -171,29 +173,22 @@ The perfect choice for those who value comfort, hygiene, and flawless results. U
           { id: "pedi-dry", name: "Advanced Dry Pedicure", price: 100 },
         ],
       },
+
       {
-        id: "lashes",
-        bgImage: lash,
-        name: "Lash Extensions",
+        id: "Hardware pedicures",
+        bgImage: peds,
+        name: "Hardware Pedicure",
         items: [
-          { id: "classic-full", name: "Classic Full Set", price: 110 },
-          { id: "classic-fill-2w", name: "Classic Fill (2 Weeks)", price: 55 },
-          { id: "classic-fill-3w", name: "Classic Fill (3 Weeks)", price: 65 },
-          { id: "hybrid-full", name: "Hybrid Full Set", price: 130 },
-          { id: "hybrid-fill-2w", name: "Hybrid Fill (2 Weeks)", price: 60 },
-          { id: "hybrid-fill-3w", name: "Hybrid Fill (3 Weeks)", price: 70 },
-          { id: "volume-full", name: "Volume Full Set", price: 150 },
-          { id: "volume-fill-2w", name: "Volume Fill (2 Weeks)", price: 70 },
-          { id: "volume-fill-3w", name: "Volume Fill (3 Weeks)", price: 80 },
-          { id: "mega-full", name: "Mega Volume Full Set", price: 170 },
-          { id: "mega-fill-2w", name: "Mega Volume Fill (2 Weeks)", price: 85 },
-          { id: "mega-fill-3w", name: "Mega Volume Fill (3 Weeks)", price: 95 },
-          { id: "lash-removal", name: "Removal", price: 30 },
-          { id: "foreign-fill", name: "Foreign Fill", price: 15 },
+          {
+            id: "pedi-shellac",
+            name: "Clean. Comfortable. Beautiful. The perfect choice for those who value comfort, hygiene, and flawless results. Using a modern machine with built-in vacuum suction, the dry technique allows for a safe and gentle treatment without soaking. Your feet feel smooth and refreshed, while your nails look neat, healthy, and polished for longer.",
+            price: 0,
+          },
         ],
       },
     ],
   },
+
   {
     id: "facial",
     bgImage: heroImg,
@@ -225,6 +220,53 @@ The perfect choice for those who value comfort, hygiene, and flawless results. U
           },
         ],
       },
+
+      {
+        id: "lashes",
+        bgImage: lash,
+        name: "Lash Extensions",
+        items: [
+          { id: "classic-full", name: "Classic Full Set", price: 110 },
+          { id: "classic-fill-2w", name: "Classic Fill (2 Weeks)", price: 55 },
+          { id: "classic-fill-3w", name: "Classic Fill (3 Weeks)", price: 65 },
+          { id: "hybrid-full", name: "Hybrid Full Set", price: 130 },
+          { id: "hybrid-fill-2w", name: "Hybrid Fill (2 Weeks)", price: 60 },
+          { id: "hybrid-fill-3w", name: "Hybrid Fill (3 Weeks)", price: 70 },
+          { id: "volume-full", name: "Volume Full Set", price: 150 },
+          { id: "volume-fill-2w", name: "Volume Fill (2 Weeks)", price: 70 },
+          { id: "volume-fill-3w", name: "Volume Fill (3 Weeks)", price: 80 },
+          { id: "mega-full", name: "Mega Volume Full Set", price: 170 },
+          { id: "mega-fill-2w", name: "Mega Volume Fill (2 Weeks)", price: 85 },
+          { id: "mega-fill-3w", name: "Mega Volume Fill (3 Weeks)", price: 95 },
+          { id: "lash-removal", name: "Removal", price: 30 },
+          { id: "foreign-fill", name: "Foreign Fill", price: 15 },
+        ],
+      },
+
+      {
+        id: "makeup-services",
+        bgImage: bridal, // replace with your actual image import
+        name: "Bridal Trial",
+        items: [
+          { id: "bridal-trial", name: "Bridal Trial", price: 110 }, // avg of 100–120
+          {
+            id: "wedding-makeup-bride",
+            name: "Wedding Makeup (Bride)",
+            price: 165,
+          }, // avg of 150–180
+          {
+            id: "bridesmaid-mother",
+            name: "Bridesmaid / Mother of the Bride",
+            price: 110,
+          }, // avg of 100–120
+          { id: "evening-event", name: "Evening / Event Makeup", price: 110 }, // avg of 100–120
+          { id: "daytime-light", name: "Daytime / Light Makeup", price: 95 }, // avg of 90–100
+          { id: "false-lashes", name: "False Lashes (Optional)", price: 12 }, // avg of 10–15
+          { id: "touch-up-kit", name: "Touch-up Kit", price: 15 }, // included or +$15 → put 15
+          { id: "travel-fee", name: "Travel Fee (Outside Salon)", price: 20 }, // starting price
+        ],
+      },
+
       {
         id: "pmu",
         bgImage: perm,
@@ -452,9 +494,13 @@ const Services = () => {
                                   }}
                                 >
                                   <div className="item-name">{item.name}</div>
-                                  <div className="item-price">
-                                    ${item.price}
-                                  </div>
+                                  {item.price >= 1 ? (
+                                    <div className="item-price">
+                                      ${item.price}
+                                    </div>
+                                  ) : (
+                                    ""
+                                  )}
                                 </div>
                               );
                             })}
