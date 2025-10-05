@@ -198,52 +198,6 @@ The perfect choice for those who value comfort, hygiene, and flawless results. U
       "Enhance your natural beauty with our brow, lash, and permanent makeup services.",
     subCategories: [
       {
-        id: "brows",
-        bgImage: brows,
-        name: "Brows & Lamination",
-        items: [
-          { id: "brow-shaping", name: "Brow Shaping & Tinting", price: 40 },
-          {
-            id: "brow-lash-tint",
-            name: "Brow Shaping & Tinting + Lash Tint",
-            price: 50,
-          },
-          {
-            id: "brow-lamination",
-            name: "Brow Lamination with Tint",
-            price: 80,
-          },
-          {
-            id: "lash-lamination",
-            name: "Lash Lamination with Tint",
-            price: 80,
-          },
-        ],
-      },
-
-      {
-        id: "lashes",
-        bgImage: lash,
-        name: "Lash Extensions",
-        items: [
-          { id: "classic-full", name: "Classic Full Set", price: 110 },
-          { id: "classic-fill-2w", name: "Classic Fill (2 Weeks)", price: 55 },
-          { id: "classic-fill-3w", name: "Classic Fill (3 Weeks)", price: 65 },
-          { id: "hybrid-full", name: "Hybrid Full Set", price: 130 },
-          { id: "hybrid-fill-2w", name: "Hybrid Fill (2 Weeks)", price: 60 },
-          { id: "hybrid-fill-3w", name: "Hybrid Fill (3 Weeks)", price: 70 },
-          { id: "volume-full", name: "Volume Full Set", price: 150 },
-          { id: "volume-fill-2w", name: "Volume Fill (2 Weeks)", price: 70 },
-          { id: "volume-fill-3w", name: "Volume Fill (3 Weeks)", price: 80 },
-          { id: "mega-full", name: "Mega Volume Full Set", price: 170 },
-          { id: "mega-fill-2w", name: "Mega Volume Fill (2 Weeks)", price: 85 },
-          { id: "mega-fill-3w", name: "Mega Volume Fill (3 Weeks)", price: 95 },
-          { id: "lash-removal", name: "Removal", price: 30 },
-          { id: "foreign-fill", name: "Foreign Fill", price: 15 },
-        ],
-      },
-
-      {
         id: "makeup-services",
         bgImage: bridal, // replace with your actual image import
         name: "Bridal Trial",
@@ -290,6 +244,62 @@ The perfect choice for those who value comfort, hygiene, and flawless results. U
             price: 300,
           },
           { id: "pmu-removal", name: "PMU & Mini Tattoo Removal", price: 70 },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "Lashes",
+    bgImage: heroImg,
+    inTitle: `Lashes `,
+    name: "Lashes",
+    description:
+      "Enhance your natural beauty with our brow, lash, and permanent makeup services.",
+    subCategories: [
+      {
+        id: "brows",
+        bgImage: brows,
+        name: "Brows & Lamination",
+        items: [
+          { id: "brow-shaping", name: "Brow Shaping & Tinting", price: 40 },
+          {
+            id: "brow-lash-tint",
+            name: "Brow Shaping & Tinting + Lash Tint",
+            price: 50,
+          },
+          {
+            id: "brow-lamination",
+            name: "Brow Lamination with Tint",
+            price: 80,
+          },
+          {
+            id: "lash-lamination",
+            name: "Lash Lamination with Tint",
+            price: 80,
+          },
+        ],
+      },
+
+      {
+        id: "lashes",
+        bgImage: lash,
+        name: "Lash Extensions",
+        items: [
+          { id: "classic-full", name: "Classic Full Set", price: 110 },
+          { id: "classic-fill-2w", name: "Classic Fill (2 Weeks)", price: 55 },
+          { id: "classic-fill-3w", name: "Classic Fill (3 Weeks)", price: 65 },
+          { id: "hybrid-full", name: "Hybrid Full Set", price: 130 },
+          { id: "hybrid-fill-2w", name: "Hybrid Fill (2 Weeks)", price: 60 },
+          { id: "hybrid-fill-3w", name: "Hybrid Fill (3 Weeks)", price: 70 },
+          { id: "volume-full", name: "Volume Full Set", price: 150 },
+          { id: "volume-fill-2w", name: "Volume Fill (2 Weeks)", price: 70 },
+          { id: "volume-fill-3w", name: "Volume Fill (3 Weeks)", price: 80 },
+          { id: "mega-full", name: "Mega Volume Full Set", price: 170 },
+          { id: "mega-fill-2w", name: "Mega Volume Fill (2 Weeks)", price: 85 },
+          { id: "mega-fill-3w", name: "Mega Volume Fill (3 Weeks)", price: 95 },
+          { id: "lash-removal", name: "Removal", price: 30 },
+          { id: "foreign-fill", name: "Foreign Fill", price: 15 },
         ],
       },
     ],
