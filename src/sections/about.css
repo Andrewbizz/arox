@@ -174,6 +174,8 @@
 }
 
 /* Main image */
+
+
 .yoga-main-image {
   grid-area: image;
   border-radius: 15px;
@@ -192,7 +194,75 @@
   object-fit: cover;
   /* Ensure image covers the area */
   display: block;
+
   /* Remove extra space below image */
+}
+
+
+.yoga-content-gridx {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  flex-wrap: wrap;
+  /* grid-template-areas: "midder lefter righter"; */
+
+}
+
+.yoga-main-imagex {
+  border-radius: 15px;
+  background-image: url('../assets/images/services.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d1d1d1;
+  width: 370px;
+  /* Fixed width for desktop */
+  position: relative;
+  height: 600px;
+}
+
+.innerServ {
+  background-color: #00000042;
+  backdrop-filter: blur(10px);
+  width: 95%;
+  margin: auto;
+  color: #f3ecde;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  border-radius: 10px;
+
+  /* background: linear-gradient(to bottom, #ffffff00, #fff, #fff, #fff); */
+  position: absolute;
+  bottom: 2%;
+}
+
+.innerServ p {
+  font-weight: lighter !important;
+  font-size: 12px;
+}
+
+.innerServ h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.lefter {
+  grid-area: lefter;
+
+}
+
+.mid {
+  grid-area: midder;
+  transform: translateY(100px);
+}
+
+.righter {
+  grid-area: righter;
+
 }
 
 /* Buttons */
@@ -250,6 +320,19 @@
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .yoga-content-grid {
+    grid-template-columns: 1fr;
+    /* Single column for tablet/mobile */
+    gap: 60px;
+    /* More space between stacked sections */
+    padding-bottom: 40px;
+    /* Reduce padding for buttons */
+    grid-template-areas:
+      "image"
+      "left"
+      "right";
+  }
+
+  .yoga-content-gridx {
     grid-template-columns: 1fr;
     /* Single column for tablet/mobile */
     gap: 60px;
@@ -337,5 +420,25 @@
     background-color: red;
     margin: auto;
     order: 0;
+  }
+
+
+  .yoga-main-imagex {
+    width: 90vw !important;
+    /* Make image responsive */
+    max-width: 340px;
+    /* Keep max width */
+    height: 400px;
+    margin: auto;
+    /* Maintain aspect ratio */
+    -ms-flex-order: 1;
+    background-color: red;
+    margin: auto;
+    order: 0;
+  }
+
+  .mid {
+    grid-area: midder;
+    transform: translateY(0px);
   }
 }
