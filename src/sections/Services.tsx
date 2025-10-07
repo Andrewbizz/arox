@@ -18,7 +18,7 @@ import perm from "/src/assets/images/services/perm.jpg";
 const servicesData = [
   {
     id: "hair",
-    name: "Hair Services",
+    name: "Hair ",
     inTitle: "Hair services",
     description:
       "Transform your look with our expert hair styling, coloring, and treatments.",
@@ -116,10 +116,9 @@ const servicesData = [
   {
     id: "nails",
     bgImage: heroImg,
-    name: "Nail & Pedicure  ",
-    inTitle: `Classic Hardware Pedicure`,
-    description: `Clean. Comfortable. Beautiful.
-The perfect choice for those who value comfort, hygiene, and flawless results. Using a modern machine with built-in vacuum suction, the dry technique allows for a safe and gentle treatment without soaking. Your feet feel smooth and refreshed, while your nails look neat, healthy, and polished for longer.
+    name: "Pedicure  ",
+    inTitle: `Our Pedicure Expereince`,
+    description: `Pamper your hands and feet with our expert nail and pedicure services.
 `,
     subCategories: [
       {
@@ -174,18 +173,18 @@ The perfect choice for those who value comfort, hygiene, and flawless results. U
         ],
       },
 
-      {
-        id: "Hardware pedicures",
-        bgImage: peds,
-        name: "Hardware Pedicure",
-        items: [
-          {
-            id: "pedi-shellac",
-            name: "Clean. Comfortable. Beautiful. The perfect choice for those who value comfort, hygiene, and flawless results. Using a modern machine with built-in vacuum suction, the dry technique allows for a safe and gentle treatment without soaking. Your feet feel smooth and refreshed, while your nails look neat, healthy, and polished for longer.",
-            price: 0,
-          },
-        ],
-      },
+      // {
+      //   id: "Hardware pedicures",
+      //   bgImage: peds,
+      //   name: "Hardware Pedicure",
+      //   items: [
+      //     {
+      //       id: "pedi-shellac",
+      //       name: "Clean. Comfortable. Beautiful. The perfect choice for those who value comfort, hygiene, and flawless results. Using a modern machine with built-in vacuum suction, the dry technique allows for a safe and gentle treatment without soaking. Your feet feel smooth and refreshed, while your nails look neat, healthy, and polished for longer.",
+      //       price: 0,
+      //     },
+      //   ],
+      // },
     ],
   },
 
@@ -252,7 +251,7 @@ The perfect choice for those who value comfort, hygiene, and flawless results. U
   {
     id: "Lashes",
     bgImage: heroImg,
-    inTitle: `Lashes `,
+    inTitle: `Lashes / brows `,
     name: "Lashes",
     description:
       "Enhance your natural beauty with our brow, lash, and permanent makeup services.",
