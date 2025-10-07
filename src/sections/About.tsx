@@ -14,6 +14,53 @@ import "./about.css";
 export default function AboutSection() {
   return (
     <>
+      <section className="yoga-section">
+        <div className="yoga-subtitle">What we offer</div>
+        <h2 className="yoga-heading">Our extensive pedicure services</h2>
+
+        <div className="yoga-content-gridx">
+          <div className="yoga-main-imagex lefter">
+            <div className="innerServ">
+              <h4>Classic Hardware Pedicure</h4>
+              <p>
+                The perfect choice for those who value comfort, hygiene, and
+                flawless results. Using a modern machine with built-in vacuum
+                suction, the dry technique allows for a safe and gentle
+                treatment without soaking. Your feet feel smooth and refreshed,
+                while your nails look neat, healthy, and polished for longer.
+              </p>
+            </div>
+          </div>
+
+          <div className="yoga-main-imagex mid">
+            <div className="innerServ">
+              <h4>Pedicure with Podology Elements</h4>
+              <p>
+                For those who want not only beautiful but also healthy feet. We
+                carefully and professionally treat cracks, thickened or
+                problematic nails, and provide care for nails affected by
+                fungus. This pedicure combines aesthetics with a therapeutic
+                approach, bringing back lightness, comfort, and confidence in
+                every step
+              </p>
+            </div>
+          </div>
+          <div className="yoga-main-imagex righter">
+            <div className="innerServ">
+              <h4>Unibrace Corrective System</h4>
+              <p>
+                Unibrace is an advanced solution for correcting ingrown and
+                problematic nails. It gently lifts the nail edges, relieves
+                pressure on the skin, and reduces discomfort. Over time, the
+                nail grows into a healthier, natural shape, restoring comfort
+                while walking. Unibrace offers an effective, non-surgical way to
+                treat nail problems and bring ease back to every step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="about-section">
         <div className="container">
           <h2>Luxury hair treatments for a radiant glow</h2>
@@ -92,53 +139,6 @@ export default function AboutSection() {
               <p>
                 Every service meets our highest standards, ensuring flawless
                 results every time.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="yoga-section">
-        <div className="yoga-subtitle">What we offer</div>
-        <h2 className="yoga-heading">Our extensive pedicure services</h2>
-
-        <div className="yoga-content-gridx">
-          <div className="yoga-main-imagex lefter">
-            <div className="innerServ">
-              <h4>Classic Hardware Pedicure</h4>
-              <p>
-                The perfect choice for those who value comfort, hygiene, and
-                flawless results. Using a modern machine with built-in vacuum
-                suction, the dry technique allows for a safe and gentle
-                treatment without soaking. Your feet feel smooth and refreshed,
-                while your nails look neat, healthy, and polished for longer.
-              </p>
-            </div>
-          </div>
-
-          <div className="yoga-main-imagex mid">
-            <div className="innerServ">
-              <h4>Pedicure with Podology Elements</h4>
-              <p>
-                For those who want not only beautiful but also healthy feet. We
-                carefully and professionally treat cracks, thickened or
-                problematic nails, and provide care for nails affected by
-                fungus. This pedicure combines aesthetics with a therapeutic
-                approach, bringing back lightness, comfort, and confidence in
-                every step
-              </p>
-            </div>
-          </div>
-          <div className="yoga-main-imagex righter">
-            <div className="innerServ">
-              <h4>Unibrace Corrective System</h4>
-              <p>
-                Unibrace is an advanced solution for correcting ingrown and
-                problematic nails. It gently lifts the nail edges, relieves
-                pressure on the skin, and reduces discomfort. Over time, the
-                nail grows into a healthier, natural shape, restoring comfort
-                while walking. Unibrace offers an effective, non-surgical way to
-                treat nail problems and bring ease back to every step.
               </p>
             </div>
           </div>
