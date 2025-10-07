@@ -213,7 +213,7 @@
 
 .yoga-main-imagex {
   border-radius: 15px;
-  background-image: url('../assets/images/services.jpg');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,16 +252,19 @@
 
 .lefter {
   grid-area: lefter;
+  background-image: url('../assets/images/ped2.jpg');
 
 }
 
 .mid {
   grid-area: midder;
   transform: translateY(100px);
+  background-image: url('../assets/images/ped1.jpg');
 }
 
 .righter {
   grid-area: righter;
+  background-image: url('../assets/images/ped3.jpg');
 
 }
 

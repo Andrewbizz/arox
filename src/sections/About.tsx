@@ -100,7 +100,7 @@ export default function AboutSection() {
 
       <section className="yoga-section">
         <div className="yoga-subtitle">What we offer</div>
-        <h2 className="yoga-heading">Here are some of our top services</h2>
+        <h2 className="yoga-heading">Our extensive pedicure services</h2>
 
         <div className="yoga-content-gridx">
           <div className="yoga-main-imagex lefter">
