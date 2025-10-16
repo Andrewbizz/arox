@@ -116,7 +116,7 @@ const servicesData = [
   {
     id: "nails",
     bgImage: heroImg,
-    name: "Pedicure  ",
+    name: "Pedicure/Manicure ",
     inTitle: `Our Pedicure Expereince`,
     description: `Pamper your hands and feet with our expert nail and pedicure services.
 `,
@@ -219,32 +219,6 @@ const servicesData = [
           { id: "travel-fee", name: "Travel Fee (Outside Salon)", price: 20 }, // starting price
         ],
       },
-
-      {
-        id: "pmu",
-        bgImage: perm,
-        name: "Permanent Makeup & Removal",
-        items: [
-          { id: "pmu-eyebrow", name: "Permanent Eyebrow Makeup", price: 300 },
-          { id: "pmu-lip", name: "Permanent Lip Makeup", price: 300 },
-          {
-            id: "pmu-eyeliner",
-            name: "Permanent Eyeliner (Classic)",
-            price: 250,
-          },
-          {
-            id: "lash-enhancement",
-            name: "Lash Enhancement (Thin Eyeliner)",
-            price: 200,
-          },
-          {
-            id: "dark-lip-neutralization",
-            name: "Dark Lip Neutralization",
-            price: 300,
-          },
-          { id: "pmu-removal", name: "PMU & Mini Tattoo Removal", price: 70 },
-        ],
-      },
     ],
   },
 
@@ -252,7 +226,7 @@ const servicesData = [
     id: "Lashes",
     bgImage: heroImg,
     inTitle: `Lashes / brows `,
-    name: "Lashes",
+    name: "Lashe/Brows",
     description:
       "Enhance your natural beauty with our brow, lash, and permanent makeup services.",
     subCategories: [
@@ -299,6 +273,42 @@ const servicesData = [
           { id: "mega-fill-3w", name: "Mega Volume Fill (3 Weeks)", price: 95 },
           { id: "lash-removal", name: "Removal", price: 30 },
           { id: "foreign-fill", name: "Foreign Fill", price: 15 },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "Lashesx",
+    bgImage: heroImg,
+    inTitle: `Permanent Makeup`,
+    name: "Permanent Makeup",
+    description:
+      "Enhance your natural beauty with our brow, lash, and permanent makeup services.",
+    subCategories: [
+      {
+        id: "pmu",
+        bgImage: perm,
+        name: "Permanent Makeup & Removal",
+        items: [
+          { id: "pmu-eyebrow", name: "Permanent Eyebrow Makeup", price: 300 },
+          { id: "pmu-lip", name: "Permanent Lip Makeup", price: 300 },
+          {
+            id: "pmu-eyeliner",
+            name: "Permanent Eyeliner (Classic)",
+            price: 250,
+          },
+          {
+            id: "lash-enhancement",
+            name: "Lash Enhancement (Thin Eyeliner)",
+            price: 200,
+          },
+          {
+            id: "dark-lip-neutralization",
+            name: "Dark Lip Neutralization",
+            price: 300,
+          },
+          { id: "pmu-removal", name: "PMU & Mini Tattoo Removal", price: 70 },
         ],
       },
     ],
